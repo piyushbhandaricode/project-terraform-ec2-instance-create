@@ -1,12 +1,10 @@
 provider "aws" {
-  region = "us-east-1"
+    region = "us-east-1"
+  
 }
 
-resource "aws_instance" "my-instance" {
-    ami = var.ami_value
-    instance_type = var.instance_type_value
-    tags = {
-      Name = "aws-instance-${timestamp()}"
-    }
-  
+module "aws-ec2-instance" {
+    source = "./modules/aws-ec2-instance"
+    instance_type_value = "t2.micro"
+    ami_value = "ami-07d9b9ddc6cd8dd30"
 }
