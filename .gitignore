@@ -2,3 +2,5 @@
 *.tfstate
 .terraform/
 .devcontainer/
+.gitignore
+*.hcl
