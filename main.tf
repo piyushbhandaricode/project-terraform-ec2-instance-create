@@ -8,3 +8,5 @@ module "aws-ec2-instance" {
     instance_type_value = "t2.micro"
     ami_value = "ami-07d9b9ddc6cd8dd30"
 }
+
+// Comment out backend.tf and write config for s3 and dynamo db provisioning
